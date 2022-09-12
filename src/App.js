@@ -2,11 +2,15 @@ import React from "react";
 import NavBar from "./Components/NavBar/NavBar";
 import { Boton } from "./Components/Boton";
 import  ItemListenerContainer  from "./Components/ItemListenerContainer" ;
+import ItemCount from "./Components/ItemCounts"
 
 
 const App = ()=> {
-  const nombre = "Pepe"
-  const apellido ="Perez"
+  const mensaje1= "No te pierdas las ofertas de esta primavera";
+  const mensaje2= "Conoce los mejores destinos para ir en invierno";
+  const mensaje3= "Disfruta el verano en Europa";
+  const mensaje4= "Promo Mundial - Viajes a Qatar";
+ 
 
   return (
     <>
@@ -17,7 +21,8 @@ const App = ()=> {
 
     </NavBar>
 
-<ItemListenerContainer  nombre={nombre} id="1" apellido ={apellido}/>
+<ItemListenerContainer  greeting={mensaje1} greeting2={mensaje2} greeting3={mensaje3} greeting4={mensaje4}/>
+<ItemCount stock={10} initial={1} onAdd={()=>{}}/> 
    
     </>
     
