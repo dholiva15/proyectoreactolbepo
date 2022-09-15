@@ -1,8 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import NavBar from "./Components/NavBar/NavBar";
 import { Boton } from "./Components/Boton";
 import  ItemListenerContainer  from "./Components/ItemListenerContainer" ;
-import ItemCount from "./Components/ItemCounts"
+//import ItemCount from "./Components/ItemCounts"
 
 
 const App = ()=> {
@@ -10,7 +10,10 @@ const App = ()=> {
   const mensaje2= "Conoce los mejores destinos para ir en invierno";
   const mensaje3= "Disfruta el verano en Europa";
   const mensaje4= "Promo Mundial - Viajes a Qatar";
- 
+ const [show, setShow]= useState(true);
+ const alternar = ()=>{
+   setShow(!show)
+ }
 
   return (
     <>
@@ -22,7 +25,14 @@ const App = ()=> {
     </NavBar>
 
 <ItemListenerContainer  greeting={mensaje1} greeting2={mensaje2} greeting3={mensaje3} greeting4={mensaje4}/>
-<ItemCount stock={10} initial={1} onAdd={()=>{}}/> 
+ 
+
+
+
+ <button onClick={alternar}> Alternar </button>
+
+
+
    
     </>
     
