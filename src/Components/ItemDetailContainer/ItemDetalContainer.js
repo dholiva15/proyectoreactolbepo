@@ -1,24 +1,26 @@
 import {Heading, Button, Text}  from '@chakra-ui/react'
 import React,  { useState, useEffect } from "react";
-import { products } from "../assets/productos";
-import { customFetch } from "../assets/utils/customFetch";
-import { ItemList } from "./itemList/itemList"
-import ItemCount from "./ItemCounts";
-import {ItemDetail, itemDetail} from "../itemDetail/ItemDetail";
+import { products } from "../../assets/productos";
+import { customFetch } from "../../assets/utils/customFetch";
+import { ItemList } from "../itemList/itemList";
+
+import {ItemDetail} from "../itemDetail/ItemDetail";
 import { CircularProgress, getImageListItemBarUtilityClass, typographyClasses } from '@mui/material';
 
 
-const ItemListenerContainer = () => {
-    const [listProducts, setListProducts]= useState([])
+const ItemDetailContainer = () => {
+    
+    
+    const [producto, setProducto]= useState([])
     
     useEffect(
         ()=>{
             customFetch(products)
-            .then(res=> setListProducts(res))
+            .then(res=> setProducto(res))
         }, []
     )
 
-    console.log(listProducts)
+    
    
     return(
         
@@ -26,9 +28,8 @@ const ItemListenerContainer = () => {
         
         
         
-        <ItemDetail producto={listProducts}/>
+        <ItemDetail producto={producto}/>
 
-        <ItemCount stock={10} initial={1} onAdd={()=>{}}/>
        
         </div>
     )

@@ -15,7 +15,7 @@ useEffect (
         const intervalo = setInterval(() => {
             console.log("ping")
             
-        }, 1000)
+        }, 2000)
 
         return(()=>{
             clearInterval(intervalo)

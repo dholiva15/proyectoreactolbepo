@@ -1,18 +1,25 @@
 
-import {Heading, Button, Text}  from '@chakra-ui/react'
+import {Heading, Button, Text, Spinner}  from '@chakra-ui/react'
 import React,  { useState, useEffect } from "react";
 import { products } from "../assets/productos";
 import { customFetch } from "../assets/utils/customFetch";
 import { ItemList } from "./itemList/itemList"
-import ItemCount from "./ItemCounts"
+//import ItemCount from "./ItemCount/ItemCount"
 
 
 const ItemListenerContainer = ({greeting, greeting2, greeting3, greeting4}) => {
     const [listProducts, setListProducts]= useState([])
+    const [loading, setLoading] = useState(true)
+    
     useEffect(
         ()=>{
             customFetch(products)
-            .then(res=> setListProducts(res))
+            .then(res=> {
+                setLoading(false)
+                setListProducts(res)
+
+            }                
+                )
         }, []
     )
 
@@ -20,10 +27,17 @@ const ItemListenerContainer = ({greeting, greeting2, greeting3, greeting4}) => {
    
     return(
         
-        <div style= {style.container}>
+        < div style= {style.container}>
         <Heading >{greeting}</Heading>
-        <ItemCount stock={9} initial={1} onAdd={()=>{}}/>
-        <ItemList listProducts={listProducts} />
+        {
+
+            loading ?
+            <Spinner />
+            :
+
+<ItemList listProducts={listProducts} />
+        }
+       
       
        
         </div>
@@ -37,7 +51,7 @@ const style = {
         flexDirection: 'column',
 
         justifyContent: 'center',
-        color: 'green',
+        color: 'blue',
         alignItems: 'center',
         marginTop:'5%'
     }
