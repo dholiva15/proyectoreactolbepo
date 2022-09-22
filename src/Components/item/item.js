@@ -10,6 +10,8 @@ return(
    <>
    <Text>{product.product}</Text>
    <Text>{product.price}</Text>
+   <Text>{product.image}</Text>
+   <Button>Detalle</Button>
    </>
 )
 }

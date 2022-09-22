@@ -1,14 +1,16 @@
-
 import {Heading, Button, Text}  from '@chakra-ui/react'
 import React,  { useState, useEffect } from "react";
 import { products } from "../assets/productos";
 import { customFetch } from "../assets/utils/customFetch";
 import { ItemList } from "./itemList/itemList"
-import ItemCount from "./ItemCounts"
+import ItemCount from "./ItemCounts";
+import {ItemDetail, itemDetail} from "../itemDetail/ItemDetail";
+import { CircularProgress, getImageListItemBarUtilityClass, typographyClasses } from '@mui/material';
 
 
-const ItemListenerContainer = ({greeting, greeting2, greeting3, greeting4}) => {
+const ItemListenerContainer = () => {
     const [listProducts, setListProducts]= useState([])
+    
     useEffect(
         ()=>{
             customFetch(products)
@@ -21,10 +23,12 @@ const ItemListenerContainer = ({greeting, greeting2, greeting3, greeting4}) => {
     return(
         
         <div style= {style.container}>
-        <Heading >{greeting}</Heading>
-        <ItemCount stock={9} initial={1} onAdd={()=>{}}/>
-        <ItemList listProducts={listProducts} />
-      
+        
+        
+        
+        <ItemDetail producto={listProducts}/>
+
+        <ItemCount stock={10} initial={1} onAdd={()=>{}}/>
        
         </div>
     )

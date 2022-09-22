@@ -7,9 +7,9 @@ import  ItemListenerContainer  from "./Components/ItemListenerContainer" ;
 
 const App = ()=> {
   const mensaje1= "No te pierdas las ofertas de esta primavera";
-  const mensaje2= "Conoce los mejores destinos para ir en invierno";
-  const mensaje3= "Disfruta el verano en Europa";
-  const mensaje4= "Promo Mundial - Viajes a Qatar";
+  const mensaje2= "LLego el invierno y las mejores ofertas en Guitarras";
+  const mensaje3= "Conoce las ofertas en pianos y teclados";
+  const mensaje4= "Promo Mundial - Relaja de los nervios del mundial y empeza a tocar bateria";
  const [show, setShow]= useState(true);
  const alternar = ()=>{
    setShow(!show)

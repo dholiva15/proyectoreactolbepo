@@ -9,9 +9,12 @@ import { Nav } from './Nav/Nav';
 const NavBar = ({nombre, apellido, id, children}) => {
     
     const categorias = [
-        {id:1, nombre:"Viajes por Argentina" },
-        {id:2, nombre:"Viajes por Latinoamerica"},
-        {id:3, nombre:"Viaje por Europa"}
+        {id:1, nombre:"Guitarras" },
+        {id:2, nombre:"Instrumento de viento"},
+        {id:3, nombre:"Baterias y Percusión"},
+        {id:4, nombre:"Teclados y Pianos"}
+
+
     ]
     return(
         <header> 
