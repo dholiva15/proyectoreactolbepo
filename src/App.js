@@ -2,6 +2,10 @@ import React, {useState} from "react";
 import NavBar from "./Components/NavBar/NavBar";
 import { Boton } from "./Components/Boton";
 import  ItemListenerContainer  from "./Components/ItemListenerContainer" ;
+import { BrowserRouter , Route, Routes} from "react-router-dom";
+import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetalContainer"
+import { rootShouldForwardProp } from "@mui/material/styles/styled";
+import {Cart} from "./Components/NavBar/Nav/Cart"
 //import ItemCount from "./Components/ItemCounts"
 
 
@@ -17,14 +21,26 @@ const App = ()=> {
 
   return (
     <>
-    <NavBar>
-      
-      
+    <BrowserRouter> 
+    <NavBar>     </NavBar>
+
+    <Routes>
+      <Route path="/" element={ <ItemListenerContainer  greeting={mensaje1} greeting2={mensaje2} greeting3={mensaje3} greeting4={mensaje4}/>} />
+     <Route path="categorias/:IdCategorias" element={<ItemListenerContainer  greeting={mensaje1} greeting2={mensaje2} greeting3={mensaje3} greeting4={mensaje4}/>} />
+     <Route path="producto/:IdProducto" element={  <ItemDetailContainer /> } />
+     <Route path="/Cart" />
+   
+  
+
+
+
+    </Routes>
+
+
     
 
-    </NavBar>
 
-<ItemListenerContainer  greeting={mensaje1} greeting2={mensaje2} greeting3={mensaje3} greeting4={mensaje4}/>
+</BrowserRouter>
  
 
 

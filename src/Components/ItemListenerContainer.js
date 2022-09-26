@@ -4,10 +4,12 @@ import React,  { useState, useEffect } from "react";
 import { products } from "../assets/productos";
 import { customFetch } from "../assets/utils/customFetch";
 import { ItemList } from "./itemList/itemList"
+import { useParams } from 'react-router-dom';
 //import ItemCount from "./ItemCount/ItemCount"
 
 
 const ItemListenerContainer = ({greeting, greeting2, greeting3, greeting4}) => {
+    let {IdCategorias} = useParams();
     const [listProducts, setListProducts]= useState([])
     const [loading, setLoading] = useState(true)
     
@@ -27,7 +29,7 @@ const ItemListenerContainer = ({greeting, greeting2, greeting3, greeting4}) => {
    
     return(
         
-        < div style= {style.container}>
+        < div style={style.container}>
         <Heading >{greeting}</Heading>
         {
 
@@ -49,8 +51,7 @@ const style = {
     container: {
         display: 'flex',
         flexDirection: 'column',
-
-        justifyContent: 'center',
+        
         color: 'blue',
         alignItems: 'center',
         marginTop:'5%'

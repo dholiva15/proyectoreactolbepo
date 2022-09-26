@@ -39,7 +39,7 @@ const ItemDetailContainer = () => {
 const style = {
     container: {
         display: 'flex',
-        flexDirection: 'column',
+        flexDirection: 'row',
 
         justifyContent: 'center',
         color: 'green',
@@ -47,4 +47,4 @@ const style = {
         marginTop:'5%'
     }
 }
-export default ItemListenerContainer
+export default ItemDetailContainer
