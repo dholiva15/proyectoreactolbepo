@@ -1,11 +1,12 @@
 import React, {useState} from "react";
 import NavBar from "./Components/NavBar/NavBar";
-import { Boton } from "./Components/Boton";
+
 import  ItemListenerContainer  from "./Components/ItemListenerContainer" ;
 import { BrowserRouter , Route, Routes} from "react-router-dom";
 import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetalContainer"
 import { rootShouldForwardProp } from "@mui/material/styles/styled";
 import {Cart} from "./Components/NavBar/Nav/Cart"
+import { Card } from "@mui/material";
 //import ItemCount from "./Components/ItemCounts"
 
 
@@ -14,10 +15,8 @@ const App = ()=> {
   const mensaje2= "LLego el invierno y las mejores ofertas en Guitarras";
   const mensaje3= "Conoce las ofertas en pianos y teclados";
   const mensaje4= "Promo Mundial - Relaja de los nervios del mundial y empeza a tocar bateria";
- const [show, setShow]= useState(true);
- const alternar = ()=>{
-   setShow(!show)
- }
+
+
 
   return (
     <>
@@ -26,9 +25,9 @@ const App = ()=> {
 
     <Routes>
       <Route path="/" element={ <ItemListenerContainer  greeting={mensaje1} greeting2={mensaje2} greeting3={mensaje3} greeting4={mensaje4}/>} />
-     <Route path="categorias/:IdCategorias" element={<ItemListenerContainer  greeting={mensaje1} greeting2={mensaje2} greeting3={mensaje3} greeting4={mensaje4}/>} />
-     <Route path="producto/:IdProducto" element={  <ItemDetailContainer /> } />
-     <Route path="/Cart" />
+     <Route path="/category/:Id" element={<ItemListenerContainer  greeting={mensaje1} greeting2={mensaje2} greeting3={mensaje3} greeting4={mensaje4}/>} />
+     <Route path="/product/:IdProducto" element={  <ItemDetailContainer /> } />
+     <Route path="/cart"  element={ <Cart/>} />
    
   
 

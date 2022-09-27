@@ -10,10 +10,10 @@ import { Nav } from './Nav/Nav';
 const NavBar = ({nombre, apellido, id, children}) => {
     
     const categorias = [
-        {id:1, nombre:"Guitarras", ruta: '/categoria/Guitarras'},
-        {id:2, nombre:"Instrumento de viento", ruta: '/categoria/InstrumentodeViento'},
-        {id:3, nombre:"Baterias y Percusión" , ruta: '/categoria/BateriasyPercusion'},
-        {id:4, nombre:"Teclados y Pianos", ruta: '/categoria/TecladosyPianos'}
+        {id:1, nombre:"Guitarras", route: '/category/guitarras'},
+        {id:2, nombre:"Instrumento de viento", route: '/category/viento'},
+        {id:3, nombre:"Baterias y Percusión" , route: '/category/percusion'},
+        {id:4, nombre:"Teclados y Pianos", route: '/category/teclados'}
 
 
     ]

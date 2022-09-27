@@ -5,13 +5,16 @@ import { products } from "../assets/productos";
 import { customFetch } from "../assets/utils/customFetch";
 import { ItemList } from "./itemList/itemList"
 import { useParams } from 'react-router-dom';
+import { selectClasses } from '@mui/material';
 //import ItemCount from "./ItemCount/ItemCount"
 
 
 const ItemListenerContainer = ({greeting, greeting2, greeting3, greeting4}) => {
-    let {IdCategorias} = useParams();
+    const { Id } = useParams();
+    console.log(Id)
     const [listProducts, setListProducts]= useState([])
     const [loading, setLoading] = useState(true)
+    const [error, setError] = useState(false)
     
     useEffect(
         ()=>{
@@ -19,8 +22,14 @@ const ItemListenerContainer = ({greeting, greeting2, greeting3, greeting4}) => {
             .then(res=> {
                 setLoading(false)
                 setListProducts(res)
+            if(Id){
+                const productosFiltrados = products.filter(products=> products.category === Id)
+                setListProducts(productosFiltrados)
+            } else {
+                setListProducts(products)
+            }
 
-            }                
+            }               
                 )
         }, []
     )

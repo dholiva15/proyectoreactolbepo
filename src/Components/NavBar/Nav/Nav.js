@@ -6,7 +6,7 @@ export const Nav = ( {categorias} ) =>{
 
         <nav >
         {categorias.map((categoria)=>{
-            return <Link key={categoria.id} to='categoria.ruta'>{categoria.nombre}</Link>
+            return <Link key={categoria.id} to={categoria.route}>{categoria.nombre}</Link>
         })}
 
          </nav>
