@@ -7,6 +7,7 @@ import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetalConta
 import { rootShouldForwardProp } from "@mui/material/styles/styled";
 import {Cart} from "./Components/NavBar/Nav/Cart"
 import { Card } from "@mui/material";
+import { ComponenteEventos } from "./Components/ComponenteEventos.js/ComponenteEventos";
 //import ItemCount from "./Components/ItemCounts"
 
 
