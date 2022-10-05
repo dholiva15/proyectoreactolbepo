@@ -1,8 +1,13 @@
-import React,{ useState, useEffect } from "react";
+import React,{ useState, useEffect, useContext } from "react";
 import { Item } from "../item/item"
 import ItemCount from "../ItemCount/ItemCount";
 
+import { context } from "../../Context/CustomContext"
+
 export const ItemDetail = ({ producto }) => {
+
+  const resultado = useContext (context);
+  console.log(resultado)
 
 
 

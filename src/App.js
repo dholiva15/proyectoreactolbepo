@@ -8,6 +8,9 @@ import { rootShouldForwardProp } from "@mui/material/styles/styled";
 import {Cart} from "./Components/NavBar/Nav/Cart"
 import { Card } from "@mui/material";
 import { ComponenteEventos } from "./Components/ComponenteEventos.js/ComponenteEventos";
+import CustomProvider from "./Context/CustomContext"
+
+
 //import ItemCount from "./Components/ItemCounts";
 
 
@@ -22,7 +25,9 @@ const App = ()=> {
 
   return (
     <>
+
     <BrowserRouter> 
+    < CustomProvider /> 
     <NavBar>     </NavBar>
 
     <Routes>
