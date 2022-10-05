@@ -8,7 +8,8 @@ import { rootShouldForwardProp } from "@mui/material/styles/styled";
 import {Cart} from "./Components/NavBar/Nav/Cart"
 import { Card } from "@mui/material";
 import { ComponenteEventos } from "./Components/ComponenteEventos.js/ComponenteEventos";
-//import ItemCount from "./Components/ItemCounts"
+//import ItemCount from "./Components/ItemCounts";
+
 
 
 const App = ()=> {
@@ -27,7 +28,7 @@ const App = ()=> {
     <Routes>
       <Route path="/" element={ <ItemListenerContainer  greeting={mensaje1} greeting2={mensaje2} greeting3={mensaje3} greeting4={mensaje4}/>} />
      <Route path="/category/:Id" element={<ItemListenerContainer  greeting={mensaje1} greeting2={mensaje2} greeting3={mensaje3} greeting4={mensaje4}/>} />
-     <Route path="/product/:IdProducto" element={  <ItemDetailContainer /> } />
+     <Route  path= "/detail/:id" element={<ItemDetailContainer/>}  />
      <Route path="/cart"  element={ <Cart/>} />
    
   
@@ -37,7 +38,6 @@ const App = ()=> {
     </Routes>
 
 
-    
 
 
 </BrowserRouter>

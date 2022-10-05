@@ -16,7 +16,7 @@ export const products = [
     product: "Bombardinos",
     category: "viento",
     price: 400000,
-    description:"",
+    description:"lo mejor de lo mejor en instrumento de viento",
     image:"https://http2.mlstatic.com/D_NQ_NP_2X_629764-MLA31114302103_062019-F.webp",
     stock:8
 },

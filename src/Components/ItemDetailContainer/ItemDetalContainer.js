@@ -6,21 +6,23 @@ import { ItemList } from "../itemList/itemList";
 
 import {ItemDetail} from "../itemDetail/ItemDetail";
 import { CircularProgress, getImageListItemBarUtilityClass, typographyClasses } from '@mui/material';
+import { useParams } from 'react-router-dom';
 
 
 const ItemDetailContainer = () => {
     
     
     const [producto, setProducto]= useState([])
+    const { id } = useParams()
     
     useEffect(
         ()=>{
-            customFetch(products)
-            .then(res=> setProducto(res))
-        }, []
+            customFetch(products, parseInt(id))
+            .then((res) => setProducto(res))
+        }, [id]
     )
 
-    
+    console.log(producto)
    
     return(
         

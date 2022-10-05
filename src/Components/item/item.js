@@ -8,7 +8,7 @@ import { blue } from "@mui/material/colors";
 
 
 const Item = ({product})=>{
-    console.log(product)
+
 return(
     
    <Card style= {styles.container}>

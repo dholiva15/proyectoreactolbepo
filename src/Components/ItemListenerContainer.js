@@ -11,7 +11,7 @@ import { selectClasses } from '@mui/material';
 
 const ItemListenerContainer = ({greeting, greeting2, greeting3, greeting4}) => {
     const { Id } = useParams();
-    console.log(Id)
+    
     const [listProducts, setListProducts]= useState([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(false)
@@ -34,7 +34,6 @@ const ItemListenerContainer = ({greeting, greeting2, greeting3, greeting4}) => {
         }, []
     )
 
-    console.log(listProducts)
    
     return(
         

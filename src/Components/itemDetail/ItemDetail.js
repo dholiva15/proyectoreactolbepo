@@ -1,7 +1,11 @@
-import React from "react";
+import React,{ useState, useEffect } from "react";
 import { Item } from "../item/item"
+import ItemCount from "../ItemCount/ItemCount";
 
 export const ItemDetail = ({ producto }) => {
+
+
+
   return (
     <div style={styles.container}>
       <img style={styles.img} src={producto.image} alt="" />
@@ -9,6 +13,7 @@ export const ItemDetail = ({ producto }) => {
         <h1>{producto.product}</h1>
         <span>${producto.price}</span>
         <p>{producto.description}</p>
+        <ItemCount  stock={producto.stock} initial={1} onAdd={()=>{}}/>
       </div>
     </div>
   );
@@ -20,7 +25,7 @@ export const ItemDetail = ({ producto }) => {
 const styles = {
   container: {
     display: "flex",
-    flexDirection: "row",
+    flexDirection: "column",
     alignItems: "center",
   },
   Infocontainer:{
