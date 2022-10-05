@@ -3,7 +3,7 @@ import { products } from "../../assets/productos";
 import {Image, Heading, Button, Text}  from '@chakra-ui/react';
 import { Flex, Spacer } from '@chakra-ui/react';
 import Card from "@mui/material/Card";
-import ItemCount from "../ItemCount/ItemCount";
+
 import { blue } from "@mui/material/colors";
 
 
@@ -16,7 +16,7 @@ return(
    <Text>${product.price}</Text>
    <Image src={product.image} w= "200px"/>
    
-   <ItemCount  stock={product.stock} initial={1} onAdd={()=>{}}/>
+   
 
    <Button>Detalle</Button>
 

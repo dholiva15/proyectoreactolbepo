@@ -13,7 +13,7 @@ useEffect (
     ()=>{
         setNumero(numero+1);
         const intervalo = setInterval(() => {
-            console.log("ping")
+            
             
         }, 2000)
 

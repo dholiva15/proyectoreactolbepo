@@ -30,7 +30,7 @@ export const ItemDetail = ({ producto }) => {
         {
           !isButtonPressed? (
 
-            <ItemCount  stock={producto.stock} initial={1} onAdd={()=>{}}/>
+            <ItemCount  stock={producto.stock} initial={1} onAdd={onAdd}/>
 
           ): (<Link to="/cart">
             <button>Finalizar</button>
