@@ -27,21 +27,20 @@ const App = ()=> {
     <>
 
     <BrowserRouter> 
-    < CustomProvider /> 
-    <NavBar>     </NavBar>
+    <CustomProvider> 
+    
+
+    <NavBar/>
 
     <Routes>
       <Route path="/" element={ <ItemListenerContainer  greeting={mensaje1} greeting2={mensaje2} greeting3={mensaje3} greeting4={mensaje4}/>} />
      <Route path="/category/:Id" element={<ItemListenerContainer  greeting={mensaje1} greeting2={mensaje2} greeting3={mensaje3} greeting4={mensaje4}/>} />
      <Route  path= "/detail/:id" element={<ItemDetailContainer/>}  />
      <Route path="/cart"  element={ <Cart/>} />
-   
-  
+ 
+   </Routes>
 
-
-
-    </Routes>
-
+   </CustomProvider>
 
 
 
