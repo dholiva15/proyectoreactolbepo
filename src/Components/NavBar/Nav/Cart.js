@@ -8,17 +8,27 @@ export const Cart = () => {
   
   const { cart } = useContext(context)
 
-  if(cart.lenght === 0){
-    return (<h1>No agregaste productos , puedes ver <Link to={'/'} > aca </Link> </h1>)
-  }
-
+  
 
   return (
     
     <>
-    {cart.map ((producto)=>{
-      return <h1 key={producto.id} >{producto.title} </h1>
-    })}
+
+    {cart.length === 0 ? (
+      <h1>
+        No agregaste productos, puedes volver <Link to={"/"}> Home </Link>
+
+      </h1>
+    ): (
+      <> 
+      {cart.map((producto)=>{
+        return <h1 key={producto.id}> {producto.title}</h1>
+      })}
+      </>
+    )
+
+    }
+
     </>
   )
 }
