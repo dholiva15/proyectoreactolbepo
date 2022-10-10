@@ -9,12 +9,14 @@ export const ItemDetail = ({ producto }) => {
 
   const resultado = useContext (context);
 
-  const { añadir } = useContext(context);
+  const { cart,addItem } = useContext(context);
+
   const [isButtonPressed, setIsButtonPressed] = useState(false)
 
-  const onAdd= (count) =>{
+  const onAdd= (contador) =>{
+    addItem(producto, contador)
     setIsButtonPressed(true)
-    añadir(count)
+    addItem(contador)
   }
   
 

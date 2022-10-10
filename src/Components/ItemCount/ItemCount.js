@@ -37,7 +37,7 @@ const restar = ()=>{
 }
 
 const agregar = ()=>{
-    onAdd(console.log( "la cantidad seleccionada es ", contador))
+    onAdd(contador)
 }
 
 
