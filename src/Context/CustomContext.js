@@ -1,7 +1,7 @@
 import React, { createContext, useState} from "react"
 
 
-export const context = createContext([{title:"uno"}, {title:"dos"}])
+export const context = createContext([])
 
 const CustomProvider = ({ children }) =>{
 
@@ -27,6 +27,7 @@ const CustomProvider = ({ children }) =>{
             console.log(oldItem);
 
             return oldItem.item !== item })
+
             
             SetCart([...newCart])
     }

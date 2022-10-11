@@ -6,11 +6,14 @@ import { customFetch } from "../assets/utils/customFetch";
 import { ItemList } from "./itemList/itemList"
 import { useParams } from 'react-router-dom';
 import { selectClasses } from '@mui/material';
+import { db } from "../firebase/firebase"
+import { getDocs, collection, query, where} from "firebase/firestore"
+
 //import ItemCount from "./ItemCount/ItemCount"
 
 
 const ItemListenerContainer = ({greeting, greeting2, greeting3, greeting4}) => {
-    const { Id } = useParams();
+    const { id } = useParams();
     
     const [listProducts, setListProducts]= useState([])
     const [loading, setLoading] = useState(true)
@@ -18,19 +21,23 @@ const ItemListenerContainer = ({greeting, greeting2, greeting3, greeting4}) => {
     
     useEffect(
         ()=>{
-            customFetch(products)
-            .then(res=> {
-                setLoading(false)
-                setListProducts(res)
-            if(Id){
-                const productosFiltrados = products.filter(products=> products.category === Id)
-                setListProducts(productosFiltrados)
-            } else {
-                setListProducts(products)
-            }
+            const productCollection = collection(db, 'products');
+            const q = query(productCollection, where("category", "==", "guitarras"))
+            getDocs(q)
+            .then((data)=>{const lista = data.docs.map((product)=>{
+                return{...product.data,
+                id:product.id}
+                
+            }); setListProducts(lista)
+        
+        })
+        .catch(()=>{setError(true)})
+        .finally(()=>{
+            setLoading(false)
+        })
 
-            }               
-                )
+
+
         }, []
     )
 

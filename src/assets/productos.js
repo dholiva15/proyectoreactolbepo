@@ -16,7 +16,7 @@ export const products = [
     product: "Bombardinos",
     category: "viento",
     price: 400000,
-    description:"lo mejor de lo mejor en instrumento de viento",
+    description:"El bombardino o eufonio es un instrumento perteneciente a la familia del viento-metal, con tubería cónica y con voz en la extensión de barítono-tenor. Es un instrumento con pistones o con válvulas rotatorias",
     image:"https://http2.mlstatic.com/D_NQ_NP_2X_629764-MLA31114302103_062019-F.webp",
     stock:8
 },
@@ -25,8 +25,8 @@ export const products = [
     product: "Bateria",
     category: "percusion",
     price: 350000,
-    description:"https://http2.mlstatic.com/D_NQ_NP_2X_834601-MLA20369131424_082015-F.webp",
-    image:"BATERIA ACÚSTICA PARQUER 5 CUERPOS NEGRA. Bombo 22x16 - Tom de pie 16x16, Toms 12 y 10  Tambor 14 x 5,5 - Incluye Platos Hihat 14x2 y Crash 16x1 y Banqueta - Pedal de Bombo - Pies: Dobles Cromados",
+    description:"BATERIA ACÚSTICA PARQUER 5 CUERPOS NEGRA. Bombo 22x16 - Tom >>>>>de pie 16x16, Toms 12 y 10  Tambor 14 x 5,5 - Incluye Platos Hihat 14x2 y Crash 16x1 y Banqueta - Pedal de Bombo - Pies: Dobles Cromados",
+    image:"https://http2.mlstatic.com/D_NQ_NP_2X_834601-MLA20369131424_082015-F.webp",
     stock:3
 },
 {
@@ -45,7 +45,7 @@ export const products = [
     product: "Guitarra Criolla",
     category: "guitarras",
     price: 95000,
-    description:"Lo que tenés que saber de este producto: .",
+    description:"Ideal para aprender. Liviana y con buen sonido: el diseño pequeño de esta guitarra acústica clásica es fácil de usar para los niños y perfecto para adultos que desean una guitarra pequeña para principiantes .",
     image: "https://images.bidcom.com.ar/resize?src=https://www.bidcom.com.ar/publicacionesML/productos/GUITAXXX/1200x900-GUITAXXX-5.jpg&w=1000&q=100",
     stock: 7
 

@@ -3,6 +3,7 @@ import { context } from "../../../Context/CustomContext"
 import { Link } from "react-router-dom"
 import './Cart.css'
 import { Button } from '@mui/material'
+
  
 
 
@@ -25,7 +26,7 @@ export const Cart = ( {condicion}) => {
       <> 
       {cart.map(({item})=> 
       <> 
-      <h1 key={item.id}> {item.title}</h1>
+      <h1 key={item.id}> {item.product}</h1>
       <Button onClick={()=>borrar(item)}> Quitar </Button>
 
       </>
