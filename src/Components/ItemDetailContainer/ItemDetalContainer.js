@@ -7,22 +7,47 @@ import { ItemList } from "../itemList/itemList";
 import {ItemDetail} from "../itemDetail/ItemDetail";
 import { CircularProgress, getImageListItemBarUtilityClass, typographyClasses } from '@mui/material';
 import { useParams } from 'react-router-dom';
-
+import { db } from "../../firebase/firebase"
+import { doc ,getDoc, collection} from "firebase/firestore"
 
 const ItemDetailContainer = () => {
     
     
     const [producto, setProducto]= useState([])
     const { id } = useParams()
+    const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
     
-    useEffect(
-        ()=>{
-            customFetch(products, parseInt(id))
-            .then((res) => setProducto(res))
-        }, [id]
+    useEffect (()=>{
+
+        const productCollection= collection(db, 'products');
+        const refDoc = doc(productCollection, id)
+        getDoc(refDoc)
+        .then((result)=>{
+            setProducto(
+                {
+                    id:result.id,
+                    ...result.data(),
+                }
+            )
+        })
+        .catch(()=>{setError(true);})
+        .finally(()=>{setLoading(false)})
+
+    }
+
+        
+
     )
 
-    console.log(producto)
+     
+   
+
+
+
+    
+
+  
    
     return(
         

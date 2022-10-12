@@ -13,16 +13,20 @@ import { getDocs, collection, query, where} from "firebase/firestore"
 
 
 const ItemListenerContainer = ({greeting, greeting2, greeting3, greeting4}) => {
-    const { id } = useParams();
+   
     
     const [listProducts, setListProducts]= useState([])
+    const { IdCategoria } = useParams();
+    
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(false)
     
     useEffect(
         ()=>{
+            
             const productCollection = collection(db, 'products');
             const q = query(productCollection, where("category", "==", "guitarras"))
+            
             getDocs(q)
             .then((data)=>{const lista = data.docs.map((product)=>{
                 return{...product.data,
@@ -38,7 +42,7 @@ const ItemListenerContainer = ({greeting, greeting2, greeting3, greeting4}) => {
 
 
 
-        }, []
+        }, 
     )
 
    

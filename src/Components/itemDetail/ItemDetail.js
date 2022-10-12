@@ -4,6 +4,8 @@ import ItemCount from "../ItemCount/ItemCount";
 
 import { context } from "../../Context/CustomContext"
 import { Link } from "react-router-dom";
+import { db } from "../../firebase/firebase"
+import { doc, getDoc, collection } from "firebase/firestore"
 
 export const ItemDetail = ({ producto }) => {
 
