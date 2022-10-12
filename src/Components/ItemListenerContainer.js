@@ -16,7 +16,7 @@ const ItemListenerContainer = ({greeting, greeting2, greeting3, greeting4}) => {
    
     
     const [listProducts, setListProducts]= useState([])
-    const { IdCategoria } = useParams();
+    const { Id } = useParams();
     
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(false)
@@ -25,9 +25,10 @@ const ItemListenerContainer = ({greeting, greeting2, greeting3, greeting4}) => {
         ()=>{
             
             const productCollection = collection(db, 'products');
-            const q = query(productCollection, where("category", "==", "guitarras"))
+            const q = query(productCollection, where("category", "==", `${Id}`))
+            let url = (Id === undefined ? productCollection : q)
             
-            getDocs(q)
+            getDocs(url)
             .then((data)=>{const lista = data.docs.map((product)=>{
                 return{...product.data,
                 id:product.id}
