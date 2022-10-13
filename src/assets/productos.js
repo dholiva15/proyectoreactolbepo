@@ -93,7 +93,7 @@ export const products = [
     product: "Guitarra Electrica",
     category: "guitarras",
     price: 185000,
-    description:"Lo que tenés que saber de este producto: ",
+    description:"Su madera de álamo la convierte en uno de los modelos más accesibles y al mismo tiempo, ofrece facilidad para trabajar. ",
     image: "https://http2.mlstatic.com/D_NQ_NP_2X_625323-MLA47677237250_092021-F.webp",
     stock: 10
 
@@ -105,7 +105,7 @@ export const products = [
     product: "Oboe",
     category: "viento",
     price: 85000,
-    description:"Lo que tenés que saber de este producto: ",
+    description:"El 122F cuenta con un sistema de conservatorio modificado fuertemente plateado que proporciona al joven oboísta todas las campanas y silbidos necesarios (resonancia en Bb bajo / F bifurcado / A-Bb y trinos en CD). Completo con estuche francés con tapa. ",
     image: "https://i0.wp.com/www.inovamusicnet.com/wp-content/uploads/2021/05/81fcQiJggGL.AC_SL1500_.jpg?fit=1500%2C1002&ssl=1",
     stock: 10
 
@@ -117,7 +117,7 @@ export const products = [
     product: "Pandereta",
     category: "percusion",
     price: 2000,
-    description:"Lo que tenés que saber de este producto: ",
+    description:"Pandero de 10 25cm de diámetro con 8 pares de sonajas ",
     image: "https://http2.mlstatic.com/D_NQ_NP_2X_946363-MLA45881911537_052021-F.webp",
     stock: 10
 
@@ -129,7 +129,7 @@ export const products = [
     product: "Teclado Musical",
     category: "teclados",
     price: 75000,
-    description:"Lo que tenés que saber de este producto: ",
+    description:"Con el CT-S100, puede disfrutar de la música en cualquier momento y lugar. Su tamaño compacto de 930 mm x 256 mm x 73 mm es un 30% más pequeño en volumen que los modelos CT-K1500 y CT-K1550, y su batería alcalina cuenta con aproximadamente 16 horas de duración*. Llevarlo es muy sencillo, gracias a un mango en la parte superior del teclado y un peso de solo 3,3 kg. El diseño incorpora bordes y esquinas redondeados, lo cual permite transportarlo con seguridad. ",
     image: "https://http2.mlstatic.com/D_NQ_NP_2X_609923-MLA46440160184_062021-F.webp",
     stock: 10
 
